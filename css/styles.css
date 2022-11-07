@@ -8,34 +8,50 @@
     --text-color:#757575;
     --accent-color:#2196F3;
 }
-html{
-    box-sizing: border-box;
-}
-*,
-*::after,
-*::before{
-    box-sizing: inherit;
-}
+
 body{
     font-family: 'Raleway', sans-serif;
     font-family: 'Roboto', sans-serif;
     background-color: var(--body-color);
 }
 
+.container{
+    width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+h1, h2, h3, p {
+    margin: 0;
+}
+img{
+    display: block;
+    width: 100%;
+    height: auto
+}
+
+
 /* Оформлення шапки */
+
 .link{
     text-decoration: none;
     color:var(--title-color);
 }
+.link:hover, .link:focus{
+    color:var(--accent-color);
+}
 .list{
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
+
 .logo{
     font-family: 'Raleway';
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
     color:var(--accent-color);
+    margin-right: auto;
 }
 .logo-header{
     color:var(--title-color)
@@ -43,18 +59,28 @@ body{
 .logo-footer{
     color:var(--body-color)
 }
-
+.header .container{
+    display: flex;
+    align-items: center;
+    border: 0px solid var(--text-color);
+}
+.nav-list{
+    display: flex;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    gap: 50px;
+}
+.header-address{
+    display: flex;
+    gap: 50px;
+    margin-left: auto;
+}
 .header-menu{
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
     color:var(--title-color);
-}
-
-.header-menu:hover, 
-.header-menu:focus{
-    color:var(--accent-color);
 }
 .current{
     color:var(--accent-color);
@@ -67,11 +93,18 @@ body{
     color: var(--text-color);
 }
 
-/* Головна сторінка - main*/
-.main-container{
+/* Головна сторінка - шапка*/
+.main-blok{
+    /* height: 600px; */
+    max-width: 1900px;
     background:var(--main-color);
 }
-.title-main{
+.main-blok .container{
+    box-sizing: border-box;
+    padding: 200px 252px;
+    text-align: center;
+}
+.main-title{
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -79,21 +112,20 @@ body{
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color:var(--body-color);
+    margin-bottom: 40px;
 }
 .main-button{
-    position: ;
-    width: 216px;
-    height: 50px;
-    left: 692px;
-    top: 430px;
+    padding: 10px 32px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     font-family: inherit;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
+    text-align: center;
     background: var(--accent-color);
     color:var(--body-color);
+    cursor: pointer;
 }
 [type="button"]:hover{
     background: #188CE8;
@@ -104,74 +136,109 @@ body{
 }
 
 /* Переваги */
-.benefit{
-
+.benefit{ 
+    padding-top: 98px;
+    padding-bottom: 94px;
+    justify-content: center;
+}
+.benefit-list{
+    display: flex;
+    gap: 30px;
 }
 .benefit-title {
+    padding-bottom: 10px;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--title-color);
 }
+
 .benefit-text{
+    width: 270px;
+    height: 48px;
     font-size: 14px;
-    line-height: 1.14;
+    line-height: 1.8;
     letter-spacing: 0.03em;
     color: var(--text-color);
 }
 /* Чим займаємося& */
-.work{
-
-}
 
 .title {
+    padding-bottom: 50px;
     font-size: 36px;
     line-height: 1.16;
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--title-color);
 }
-.foto {
-    position: ;
-    width: 270px;
-    height: 260px;
-    left: 1115px;
-    top: 1632px;
-    background: url(2968);
-    border-radius: 0px;
+.work-list{
+    display: flex;
+    justify-content:center;
+    gap: 30px;
 }
-
+.foto-list{
+    width: 370px;
+    height: 294px;
+    left: 1015px;
+    top: 1058px;
+}
 /* наша команда */ 
 .team {
     background: var(--second-color);
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+.team-list{
+    display: flex;
+    gap: 30px;   
+}
+.team-item{
+    width: 270px;
+    height: 368px;
+    left: 515px;
+    top: 1632px;
+    background: var(--body-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
 }
 .team-card{
     background: url(4853.jpg);
     border-radius: 0px;
 }
 .team-name {
+    margin-bottom: 10px;
     font-size: 16px;
     line-height: 1.19;
+    text-align: center;
     letter-spacing: 0.03em;
     color: var(--title-color);
 }
-
 .team-aside {
     font-size: 16px;
     line-height: 1.19;
+    text-align: center;
     letter-spacing: 0.03em;
     color: var(--text-color);
+}
+.foto-desk{
+    padding: 30px 0px;
 }
 
 /* Підвал */
 .footer{
+    padding-top: 60px;
+    padding-bottom: 60px;
     background-color:var(--main-color);
 }
 .footer-address{
+    padding-top: 10px;
+    width: 231px;
+    height: 81px;
+    left: 215px;
+    top: 2205px;
     font-style: normal;
 }
-
 .footer-link{
     font-size: 14px;
     line-height: 1.71;
@@ -185,27 +252,49 @@ body{
 .adress{
     color: var(--body-color);
 }
- 
 /*Сторінка портфоліо */
 
  /* Кнопки */
-
- .button{
+.button-list {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    padding-top: 95px;
+    padding-bottom: 50px;
+}
+.button{
+    padding: 6px 22px;
+    border-radius: 4px;
     font-family: inherit;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.63;
     text-align: center;
     letter-spacing: 0.03em;
+    background-color: var(--second-color);
     color: var(--title-color);
+    cursor: pointer;
  }
  .button:hover, .button:focus{
     background:var(--accent-color);
     color:var(--body-color);
-
  }
  /* Картки з меню */
+.portfolio-list{
+   display: flex;
+   flex-wrap:wrap;
+   gap: 30px;
+   margin-left: 0;
+   background: #FFFFFF;
+}
+.card{
+    background: url(2910404);
+}
+.portfolio-text{
+    padding: 20px 24px;
+}
 .caption{
+    padding-bottom: 4px;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
@@ -217,5 +306,4 @@ body{
     letter-spacing: 0.03em;
     color: var(--text-color);
 }
-
  
