@@ -46,36 +46,37 @@ img{
 }
 
 .logo{
+    padding-top: 24px;
+    padding-bottom: 25px;
+    margin-right: 93px;
     font-family: 'Raleway';
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
     color:var(--accent-color);
-    margin-right: auto;
 }
 .logo-header{
     color:var(--title-color)
 }
-.logo-footer{
-    color:var(--body-color)
+.header{
+    border-bottom: 1px solid #ECECEC;
 }
 .header .container{
     display: flex;
     align-items: center;
-    border: 0px solid var(--text-color);
 }
 .nav-list{
     display: flex;
-    padding-top: 32px;
-    padding-bottom: 32px;
     gap: 50px;
 }
 .header-address{
     display: flex;
     gap: 50px;
-    margin-left: auto;
+    margin-left: 344px;
 }
 .header-menu{
+    padding-top: 32px;
+    padding-bottom: 32px;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -95,16 +96,17 @@ img{
 
 /* Головна сторінка - шапка*/
 .main-blok{
-    /* height: 600px; */
-    max-width: 1900px;
+    padding-top: 200px;
+    padding-bottom: 200px;
     background:var(--main-color);
 }
 .main-blok .container{
     box-sizing: border-box;
-    padding: 200px 252px;
     text-align: center;
 }
 .main-title{
+    margin-bottom: 40px;
+    margin: 0 auto;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -112,9 +114,10 @@ img{
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color:var(--body-color);
-    margin-bottom: 40px;
 }
 .main-button{
+    margin-top: 30px;
+    margin: 0 auto;
     padding: 10px 32px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
@@ -165,7 +168,7 @@ img{
 /* Чим займаємося& */
 
 .title {
-    padding-bottom: 50px;
+    margin-bottom: 50px;
     font-size: 36px;
     line-height: 1.16;
     text-align: center;
@@ -176,6 +179,7 @@ img{
     display: flex;
     justify-content:center;
     gap: 30px;
+    padding-bottom: 94px;
 }
 .foto-list{
     width: 370px;
@@ -227,16 +231,24 @@ img{
 
 /* Підвал */
 .footer{
+    display: block;
     padding-top: 60px;
     padding-bottom: 60px;
     background-color:var(--main-color);
 }
+.logo-footer-title{
+    display: block;
+    margin-bottom: 20px;
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    color: var(--accent-color); 
+}
+.logo-footer {
+    color: var(--body-color)
+}
 .footer-address{
-    padding-top: 10px;
-    width: 231px;
-    height: 81px;
-    left: 215px;
-    top: 2205px;
     font-style: normal;
 }
 .footer-link{
@@ -250,17 +262,24 @@ img{
     color: var(--accent-color);
 }
 .adress{
+    margin-bottom: 9px;
     color: var(--body-color);
 }
+.mail{
+    margin-bottom: 9px;
+}
 /*Сторінка портфоліо */
+.filter{
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
 
  /* Кнопки */
 .button-list {
     display: flex;
     gap: 8px;
     justify-content: center;
-    padding-top: 95px;
-    padding-bottom: 50px;
+    margin-bottom: 56px;
 }
 .button{
     padding: 6px 22px;
@@ -274,6 +293,7 @@ img{
     background-color: var(--second-color);
     color: var(--title-color);
     cursor: pointer;
+    border: none;
  }
  .button:hover, .button:focus{
     background:var(--accent-color);
@@ -292,6 +312,7 @@ img{
 }
 .portfolio-text{
     padding: 20px 24px;
+    border: 1px solid #EEEEEE;
 }
 .caption{
     padding-bottom: 4px;
